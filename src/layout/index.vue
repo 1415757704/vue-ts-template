@@ -69,7 +69,7 @@ export default class extends Vue {
 
 <style lang="less" scoped>
 .app-wrapper {
-  //   @include clearfix;
+  .clearfix;
   position: relative;
   height: 100%;
   width: 100%;
@@ -88,13 +88,13 @@ export default class extends Vue {
 .main-container {
   min-height: 100%;
   transition: margin-left 0.28s;
-  //   margin-left: $sideBarWidth;
+  margin-left: @sideBarWidth;
   position: relative;
 }
 
 .sidebar-container {
   transition: width 0.28s;
-  //   width: $sideBarWidth !important;
+  width: @sideBarWidth !important;
   height: 100%;
   position: fixed;
   font-size: 0px;
@@ -110,7 +110,7 @@ export default class extends Vue {
   top: 0;
   right: 0;
   z-index: 9;
-  //   width: calc(100% - #{$sideBarWidth});
+  width: calc(100% - @sideBarWidth);
   transition: width 0.28s;
 }
 
@@ -136,7 +136,7 @@ export default class extends Vue {
 
   .sidebar-container {
     transition: transform 0.28s;
-    // width: $sideBarWidth !important;
+    width: @sideBarWidth !important;
   }
 
   &.openSidebar {
@@ -148,7 +148,7 @@ export default class extends Vue {
     .sidebar-container {
       pointer-events: none;
       transition-duration: 0.3s;
-      //   transform: translate3d(-$sideBarWidth, 0, 0);
+      transform: translate3d(-@sideBarWidth, 0, 0);
     }
   }
 
